@@ -61,7 +61,7 @@ class PresupuestoFragment : BaseSeccionFragment() {
             "07 — Vigas"               to obraViewModel.vigas.value,
             "08 — Losas Aligeradas"    to obraViewModel.losas.value
         ).filter { (_, r) -> r != null && r.isValid }
-            .map { (n, r) -> n to r!! }
+            .mapNotNull { (n, r) -> r?.let { n to it } }
 
         if (seccionesActivas.isEmpty()) {
             b.tvSinDatos.visibility           = View.VISIBLE
@@ -94,8 +94,8 @@ class PresupuestoFragment : BaseSeccionFragment() {
         // Show project name in card
         val p = obraViewModel.proyectoActivo.value
         b.tvNombreProyectoPresup.text = p?.nombre ?: "Proyecto sin nombre"
-        b.tvPropietarioPresup.text    = if (p?.propietario.isNullOrBlank()) "" else "Propietario: ${p!!.propietario}"
-        b.tvUbicacionPresup.text      = if (p?.ubicacion.isNullOrBlank()) "" else "📍 ${p!!.ubicacion}"
+        b.tvPropietarioPresup.text    = p?.propietario?.takeIf { it.isNotBlank() }?.let { "Propietario: $it" } ?: ""
+        b.tvUbicacionPresup.text      = p?.ubicacion?.takeIf { it.isNotBlank() }?.let { "📍 $it" } ?: ""
     }
 
     private fun addPartidaRow(nombre: String, mat: Double, mo: Double, total: Double, alt: Boolean) {
