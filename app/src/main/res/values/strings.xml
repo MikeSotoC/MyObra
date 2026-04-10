@@ -1,0 +1,146 @@
+<resources>
+    <string name="app_name">MyObra</string>
+    <string name="navigation_drawer_open">Abrir menú</string>
+    <string name="navigation_drawer_close">Cerrar menú</string>
+    <string name="nav_header_title">MyObra</string>
+    <string name="nav_header_subtitle">Cálculo de Materiales y Presupuesto</string>
+    <string name="nav_header_desc">Cabecera de navegación</string>
+    <string name="action_settings">Configuración</string>
+
+    <!-- Nav sections -->
+    <string name="menu_zapatas">Zapatas y Solados</string>
+    <string name="menu_cimientos">Cimientos Corridos</string>
+    <string name="menu_sobrecimiento">Sobrecimientos</string>
+    <string name="menu_muros">Muros de Ladrillos</string>
+    <string name="menu_falsopiso">Falso Piso</string>
+    <string name="menu_columnas">Columnas</string>
+    <string name="menu_vigas">Vigas</string>
+    <string name="menu_losas">Losas Aligeradas</string>
+    <string name="menu_presupuesto">Presupuesto General</string>
+    <string name="menu_precios">Precios de Materiales</string>
+
+    <!-- Common -->
+    <string name="label_calcular">Calcular</string>
+    <string name="label_limpiar">Limpiar</string>
+    <string name="label_datos_entrada">Datos de Entrada</string>
+    <string name="label_resultados">Resultados de Cálculo</string>
+    <string name="label_presupuesto">Presupuesto de Materiales</string>
+    <string name="label_mano_obra">Mano de Obra (CAPECO)</string>
+    <string name="label_tipo_concreto">Tipo de Concreto</string>
+    <string name="label_proporcion">Proporción</string>
+    <string name="label_largo">Largo (m)</string>
+    <string name="label_ancho">Ancho (m)</string>
+    <string name="label_alto">Alto (m)</string>
+    <string name="label_cantidad">Cantidad</string>
+    <string name="label_espesor">Espesor (cm)</string>
+    <string name="label_area">Área (m²)</string>
+    <string name="label_volumen">Volumen (m³)</string>
+    <string name="hint_ingrese_valor">Ingrese valor</string>
+    <string name="label_cemento">Cemento (bolsas)</string>
+    <string name="label_arena">Arena (m³)</string>
+    <string name="label_piedra">Piedra (m³)</string>
+    <string name="label_agua">Agua (m³)</string>
+    <string name="label_hormigon">Hormigón (m³)</string>
+    <string name="label_piedra_grande">Piedra Grande (m³)</string>
+    <string name="label_acero">Acero (kg)</string>
+    <string name="label_ladrillo">Ladrillo (und)</string>
+    <string name="label_total">TOTAL</string>
+    <string name="label_sin_datos">Ingrese los datos y presione Calcular</string>
+    <string name="label_capeco_referencia">Proporciones CAPECO (referencia)</string>
+    <string name="label_num_elementos">Número de elementos</string>
+    <string name="label_base">Base (m)</string>
+    <string name="label_peralte">Peralte (m)</string>
+    <string name="label_longitud">Longitud (m)</string>
+    <string name="label_altura">Altura (m)</string>
+    <string name="label_seccion">Sección (m)</string>
+    <string name="label_tipo_ladrillo">Tipo de Ladrillo</string>
+    <string name="label_altura_losa">Altura de Losa (cm)</string>
+    <string name="label_aparejo">Aparejo</string>
+
+    <!-- Presupuesto -->
+    <string name="label_presupuesto_general">Presupuesto General de Obra</string>
+    <string name="label_partida">Partida</string>
+    <string name="label_subtotal">Subtotal (S/.)</string>
+    <string name="label_total_obra">TOTAL OBRA</string>
+    <string name="label_sin_calculos">No hay cálculos disponibles aún.\nIngrese datos en cada sección y calcule.</string>
+
+    <!-- Precios -->
+    <string name="label_precios_materiales">Precios de Materiales</string>
+    <string name="label_precio_cemento">Cemento (S/. / bolsa)</string>
+    <string name="label_precio_arena">Arena gruesa (S/. / m³)</string>
+    <string name="label_precio_piedra">Piedra chancada (S/. / m³)</string>
+    <string name="label_precio_agua">Agua (S/. / m³)</string>
+    <string name="label_precio_hormigon">Hormigón (S/. / m³)</string>
+    <string name="label_precio_piedra_grande">Piedra grande (S/. / m³)</string>
+    <string name="label_precio_acero">Acero corrugado (S/. / kg)</string>
+    <string name="label_precio_ladrillo_kk">Ladrillo KK 18H (S/. / und)</string>
+    <string name="label_precio_ladrillo_hueco">Ladrillo hueco (S/. / und)</string>
+    <string name="label_precio_ladrillo_caseton">Ladrillo casetón (S/. / und)</string>
+    <string name="label_mano_obra_operario">M.O. Operario (S/. / HH)</string>
+    <string name="label_mano_obra_oficial">M.O. Oficial (S/. / HH)</string>
+    <string name="label_mano_obra_peon">M.O. Peón (S/. / HH)</string>
+    <string name="label_guardar_precios">Guardar Precios</string>
+    <string name="label_precios_guardados">Precios guardados correctamente</string>
+    <string name="label_restaurar_defecto">Restaurar valores por defecto</string>
+    <string name="label_nota_precios">* Precios referenciales. Edite según mercado local.</string>
+
+    <!-- Proyectos -->
+    <string name="menu_proyectos">Mis Proyectos</string>
+    <string name="label_nuevo_proyecto">Nuevo proyecto</string>
+    <string name="label_sin_proyectos">No tienes proyectos aún</string>
+
+
+    <!-- Zapatas -->
+    <string name="title_zapatas">Zapatas y Solados</string>
+    <string name="desc_zapatas">Cimentación aislada de concreto armado. Transmite cargas puntuales de columnas al terreno.</string>
+    <string name="label_fc_concreto">Resistencia f\'c (kg/cm²)</string>
+    <string name="label_num_zapatas">N° de Zapatas</string>
+    <string name="label_solado">¿Incluir solado?</string>
+    <string name="label_espesor_solado">Espesor solado (cm)</string>
+
+    <!-- Cimientos -->
+    <string name="title_cimientos">Cimientos Corridos</string>
+    <string name="desc_cimientos">Cimentación continua de concreto ciclópeo. Soporta muros portantes.</string>
+    <string name="label_largo_total">Largo total (m)</string>
+
+    <!-- Sobrecimiento -->
+    <string name="title_sobrecimiento">Sobrecimientos</string>
+    <string name="desc_sobrecimiento">Elemento de concreto simple sobre cimientos corridos. Protege los muros de la humedad.</string>
+
+    <!-- Muros -->
+    <string name="title_muros">Muros de Ladrillos</string>
+    <string name="desc_muros">Mampostería según norma E.070 RNE. Ladrillo KK artesanal o industrial.</string>
+    <string name="label_num_paños">N° de Paños</string>
+    <string name="label_tipo_aparejo">Tipo de aparejo</string>
+
+    <!-- Falso Piso -->
+    <string name="title_falsopiso">Falso Piso y Contrapiso</string>
+    <string name="desc_falsopiso">Concreto simple de nivelación. Base para pisos acabados.</string>
+
+    <!-- Columnas -->
+    <string name="title_columnas">Columnas</string>
+    <string name="desc_columnas">Elemento vertical de concreto armado. Transmite cargas de losas y vigas a la cimentación.</string>
+    <string name="label_ancho_seccion">Ancho sección (m)</string>
+    <string name="label_largo_seccion">Largo sección (m)</string>
+    <string name="label_num_columnas">N° de Columnas</string>
+
+    <!-- Vigas -->
+    <string name="title_vigas">Vigas</string>
+    <string name="desc_vigas">Elemento horizontal de concreto armado. Soporta cargas de losas y las transmite a las columnas.</string>
+    <string name="label_num_vigas">N° de Vigas</string>
+
+    <!-- Losas -->
+    <string name="title_losas">Losas Aligeradas</string>
+    <string name="desc_losas">Losa en una dirección con viguetas y ladrillo de relleno. Cubre los ambientes.</string>
+
+    <!-- Aceros -->
+    <string name="diametro_6mm">Ø 6mm (1/4")</string>
+    <string name="diametro_8mm">Ø 8mm (5/16")</string>
+    <string name="diametro_38">Ø 3/8" (estribos)</string>
+    <string name="diametro_12">Ø 1/2" (longitudinal)</string>
+    <string name="diametro_58">Ø 5/8"</string>
+    <string name="diametro_34">Ø 3/4"</string>
+    <string name="diametro_1">Ø 1"</string>
+
+    <string name="warning_icon">⚠</string>
+</resources>

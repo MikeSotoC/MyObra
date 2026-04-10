@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fila de presupuesto — mismas dimensiones que las filas de resultados -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <!-- Accent bar — same 3dp as resultados rows -->
+    <View
+        android:id="@+id/viewAccent"
+        android:layout_width="3dp"
+        android:layout_height="22dp"
+        android:background="?attr/colorPrimary"
+        android:layout_marginEnd="10dp"/>
+
+    <!-- Partida label -->
+    <TextView
+        android:id="@+id/tvPCemPartida"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="?attr/colorOnSurface"/>
+
+    <!-- Cantidad — same width as resultados quantity column (100dp) -->
+    <TextView
+        android:id="@+id/tvPCemCantidad"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textSize="12sp"
+        android:textColor="?attr/colorOnSurfaceVariant"/>
+
+    <!-- Subtotal — same width as resultados unit column (84dp) -->
+    <TextView
+        android:id="@+id/tvPCemSubtotal"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorOnSurface"/>
+</LinearLayout>

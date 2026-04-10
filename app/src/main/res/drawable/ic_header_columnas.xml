@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp" android:height="160dp"
+    android:viewportWidth="360" android:viewportHeight="160">
+    <!-- Three columns -->
+    <!-- Column 1 -->
+    <path android:fillColor="#FFFFFFFF" android:pathData="M60,20 L110,20 L110,140 L60,140 Z"/>
+    <!-- Column 2 -->
+    <path android:fillColor="#FFFFFFFF" android:pathData="M155,20 L205,20 L205,140 L155,140 Z"/>
+    <!-- Column 3 -->
+    <path android:fillColor="#FFFFFFFF" android:pathData="M250,20 L300,20 L300,140 L250,140 Z"/>
+    <!-- Rebar in each column (4 bars) -->
+    <path android:strokeColor="#C0C95100" android:strokeWidth="3"
+        android:pathData="M65,22 L65,138 M105,22 L105,138 M65,22 L65,138 M105,22 L105,138"/>
+    <path android:strokeColor="#C0C95100" android:strokeWidth="3"
+        android:pathData="M160,22 L160,138 M200,22 L200,138"/>
+    <path android:strokeColor="#C0C95100" android:strokeWidth="3"
+        android:pathData="M255,22 L255,138 M295,22 L295,138"/>
+    <!-- Stirrups -->
+    <path android:strokeColor="#C0C95100" android:strokeWidth="1.5"
+        android:pathData="M65,30 L105,30 L105,38 L65,38 Z M65,50 L105,50 L105,58 L65,58 Z M65,70 L105,70 L105,78 L65,78 Z M65,90 L105,90 L105,98 L65,98 Z M65,110 L105,110 L105,118 L65,118 Z M65,128 L105,128 L105,136 L65,136 Z"/>
+    <path android:strokeColor="#C0C95100" android:strokeWidth="1.5"
+        android:pathData="M160,30 L200,30 L200,38 L160,38 Z M160,60 L200,60 L200,68 L160,68 Z M160,90 L200,90 L200,98 L160,98 Z M160,120 L200,120 L200,128 L160,128 Z"/>
+    <path android:strokeColor="#C0C95100" android:strokeWidth="1.5"
+        android:pathData="M255,30 L295,30 L295,38 L255,38 Z M255,60 L295,60 L295,68 L255,68 Z M255,90 L295,90 L295,98 L255,98 Z M255,120 L295,120 L295,128 L255,128 Z"/>
+    <!-- Cross section indicator -->
+    <path android:strokeColor="#80FFFFFF" android:strokeWidth="1" android:pathData="M310,130 L350,130 L350,150 L310,150 Z"/>
+    <path android:strokeColor="#80FFFFFF" android:strokeWidth="0.5" android:pathData="M315,133 L345,133 M315,140 L345,140 M315,147 L345,147"/>
+</vector>

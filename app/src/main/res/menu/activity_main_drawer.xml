@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <!-- ── Proyectos ── -->
+    <group android:id="@+id/group_proyectos" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_proyectos"
+            android:icon="@drawable/ic_nav_presupuesto"
+            android:title="Mis Proyectos"/>
+    </group>
+
+    <item android:title="CÁLCULO POR PARTIDA">
+        <menu>
+            <group android:id="@+id/group_calculo" android:checkableBehavior="single">
+                <item android:id="@+id/nav_zapatas"
+                    android:icon="@drawable/ic_nav_zapatas"
+                    android:title="@string/menu_zapatas"/>
+                <item android:id="@+id/nav_cimientos"
+                    android:icon="@drawable/ic_nav_cimientos"
+                    android:title="@string/menu_cimientos"/>
+                <item android:id="@+id/nav_sobrecimiento"
+                    android:icon="@drawable/ic_nav_sobrecimiento"
+                    android:title="@string/menu_sobrecimiento"/>
+                <item android:id="@+id/nav_muros"
+                    android:icon="@drawable/ic_nav_muros"
+                    android:title="@string/menu_muros"/>
+                <item android:id="@+id/nav_falsopiso"
+                    android:icon="@drawable/ic_nav_falsopiso"
+                    android:title="@string/menu_falsopiso"/>
+                <item android:id="@+id/nav_columnas"
+                    android:icon="@drawable/ic_nav_columnas"
+                    android:title="@string/menu_columnas"/>
+                <item android:id="@+id/nav_vigas"
+                    android:icon="@drawable/ic_nav_vigas"
+                    android:title="@string/menu_vigas"/>
+                <item android:id="@+id/nav_losas"
+                    android:icon="@drawable/ic_nav_losas"
+                    android:title="@string/menu_losas"/>
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="RESUMEN Y CONFIG">
+        <menu>
+            <group android:id="@+id/group_resumen" android:checkableBehavior="single">
+                <item android:id="@+id/nav_presupuesto"
+                    android:icon="@drawable/ic_nav_presupuesto"
+                    android:title="@string/menu_presupuesto"/>
+                <item android:id="@+id/nav_precios"
+                    android:icon="@drawable/ic_nav_precios"
+                    android:title="@string/menu_precios"/>
+            </group>
+        </menu>
+    </item>
+</menu>
+
+    <group
+        android:id="@+id/group_calculo"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_zapatas"
+            android:icon="@drawable/ic_nav_zapatas"
+            android:title="@string/menu_zapatas"/>
+        <item
+            android:id="@+id/nav_cimientos"
+            android:icon="@drawable/ic_nav_cimientos"
+            android:title="@string/menu_cimientos"/>
+        <item
+            android:id="@+id/nav_sobrecimiento"
+            android:icon="@drawable/ic_nav_sobrecimiento"
+            android:title="@string/menu_sobrecimiento"/>
+        <item
+            android:id="@+id/nav_muros"
+            android:icon="@drawable/ic_nav_muros"
+            android:title="@string/menu_muros"/>
+        <item
+            android:id="@+id/nav_falsopiso"
+            android:icon="@drawable/ic_nav_falsopiso"
+            android:title="@string/menu_falsopiso"/>
+        <item
+            android:id="@+id/nav_columnas"
+            android:icon="@drawable/ic_nav_columnas"
+            android:title="@string/menu_columnas"/>
+        <item
+            android:id="@+id/nav_vigas"
+            android:icon="@drawable/ic_nav_vigas"
+            android:title="@string/menu_vigas"/>
+        <item
+            android:id="@+id/nav_losas"
+            android:icon="@drawable/ic_nav_losas"
+            android:title="@string/menu_losas"/>
+    </group>
+
+    <group
+        android:id="@+id/group_resumen"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_presupuesto"
+            android:icon="@drawable/ic_nav_presupuesto"
+            android:title="@string/menu_presupuesto"/>
+        <item
+            android:id="@+id/nav_precios"
+            android:icon="@drawable/ic_nav_precios"
+            android:title="@string/menu_precios"/>
+    </group>
+</menu>

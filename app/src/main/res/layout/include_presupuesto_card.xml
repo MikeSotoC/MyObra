@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  C. PRESUPUESTO DE MATERIALES
+  Sistema visual idéntico a include_resultados_card:
+  - Misma card (14dp, 2dp elevation)
+  - Mismo header strip (38dp, colorSurfaceVariant)
+  - Mismas filas con barra de acento izquierda 3dp
+  - Misma tipografía y espaciados
+  Solo agrega columna SUBTOTAL a la derecha.
+-->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardPresupuesto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginBottom="4dp"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="14dp"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ── Header — idéntico al de Materiales ── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="14dp"
+            android:background="?attr/colorSurfaceVariant">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C.  PRESUPUESTO DE MATERIALES"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.06"
+                android:textColor="?attr/colorOnSurfaceVariant"/>
+        </LinearLayout>
+
+        <!-- ── Empty state ── -->
+        <LinearLayout
+            android:id="@+id/layoutSinDatosP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingVertical="28dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_sin_datos"
+                android:textSize="13sp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!-- ── Content ── -->
+        <LinearLayout
+            android:id="@+id/layoutPresupuesto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="14dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="14dp"
+            android:visibility="gone">
+
+            <!-- Col headers — same style as resultados card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp">
+                <TextView android:layout_width="0dp" android:layout_weight="1"
+                    android:layout_height="wrap_content" android:text="PARTIDA"
+                    android:textSize="9sp" android:textStyle="bold" android:letterSpacing="0.08"
+                    android:textColor="?attr/colorOnSurfaceVariant"/>
+                <TextView android:layout_width="100dp" android:layout_height="wrap_content"
+                    android:gravity="end" android:text="CANTIDAD"
+                    android:textSize="9sp" android:textStyle="bold" android:letterSpacing="0.08"
+                    android:textColor="?attr/colorOnSurfaceVariant"/>
+                <TextView android:layout_width="84dp" android:layout_height="wrap_content"
+                    android:gravity="end" android:text="SUBTOTAL"
+                    android:textSize="9sp" android:textStyle="bold" android:letterSpacing="0.08"
+                    android:textColor="?attr/colorOnSurfaceVariant"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="?attr/colorOutlineVariant"
+                android:layout_marginBottom="2dp"/>
+
+            <!-- Cemento -->
+            <include layout="@layout/item_presupuesto_row" android:id="@+id/pRowCemento"/>
+            <!-- Arena / Hormigón -->
+            <include layout="@layout/item_presupuesto_row" android:id="@+id/pRowArena"/>
+            <!-- Piedra -->
+            <include layout="@layout/item_presupuesto_row" android:id="@+id/pRowPiedra"
+                android:visibility="gone"/>
+            <!-- Piedra Grande -->
+            <include layout="@layout/item_presupuesto_row" android:id="@+id/pRowPiedraGrande"
+                android:visibility="gone"/>
+            <!-- Agua -->
+            <include layout="@layout/item_presupuesto_row" android:id="@+id/pRowAgua"/>
+            <!-- Ladrillo -->
+            <include layout="@layout/item_presupuesto_row" android:id="@+id/pRowLadrillo"
+                android:visibility="gone"/>
+
+            <!-- Acero — one row per bar (dynamic) -->
+            <LinearLayout
+                android:id="@+id/containerAceroRows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"/>
+
+            <!-- Acero static row (never shown — kept for legacy id compatibility) -->
+            <LinearLayout android:id="@+id/pRowAcero"
+                android:layout_width="match_parent" android:layout_height="0dp"
+                android:orientation="horizontal" android:visibility="gone"/>
+
+            <!-- Divider -->
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="?attr/colorOutlineVariant"
+                android:layout_marginVertical="4dp"/>
+
+            <!-- Mano de Obra -->
+            <LinearLayout android:id="@+id/pRowManoObra"
+                android:layout_width="match_parent" android:layout_height="36dp"
+                android:orientation="horizontal" android:gravity="center_vertical">
+                <View android:layout_width="3dp" android:layout_height="22dp"
+                    android:background="?attr/colorTertiary" android:layout_marginEnd="10dp"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"
+                    android:layout_height="wrap_content" android:text="Mano de obra (CAPECO)"
+                    android:textSize="13sp" android:textColor="?attr/colorOnSurface"/>
+                <TextView android:id="@+id/tvPMOCantidad"
+                    android:layout_width="100dp" android:layout_height="wrap_content"
+                    android:gravity="end" android:textSize="12sp"
+                    android:textColor="?attr/colorOnSurfaceVariant"/>
+                <TextView android:id="@+id/tvPMOSubtotal"
+                    android:layout_width="84dp" android:layout_height="wrap_content"
+                    android:gravity="end" android:textSize="13sp" android:textStyle="bold"
+                    android:textColor="?attr/colorOnSurface"/>
+            </LinearLayout>
+
+            <!-- Total -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="?attr/colorPrimaryContainer"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="12dp"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL PARCIAL"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.06"
+                    android:textColor="?attr/colorOnPrimaryContainer"/>
+                <TextView
+                    android:id="@+id/tvTotalObra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorOnPrimaryContainer"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

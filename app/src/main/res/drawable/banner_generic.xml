@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp" android:height="140dp"
+    android:viewportWidth="360" android:viewportHeight="140">
+    <path android:fillColor="#FFF3E0" android:pathData="M0,0h360v140H0z"/>
+    <!-- Construction pattern background -->
+    <path android:fillColor="#FFE0B2" android:fillAlpha="0.5"
+        android:pathData="M0,20h360v4H0zM0,48h360v4H0zM0,76h360v4H0zM0,104h360v4H0z
+                          M20,0h4v140h-4zM60,0h4v140h-4zM100,0h4v140h-4zM140,0h4v140h-4z
+                          M180,0h4v140h-4zM220,0h4v140h-4zM260,0h4v140h-4zM300,0h4v140h-4zM340,0h4v140h-4z"/>
+    <!-- Hard hat icon center -->
+    <path android:fillColor="#C95100"
+        android:pathData="M180,40 C160,40 145,55 145,72 L145,80 L215,80 L215,72 C215,55 200,40 180,40z"/>
+    <path android:fillColor="#952800"
+        android:pathData="M140,80h80v10H140z"/>
+    <path android:fillColor="#FF8F00"
+        android:pathData="M155,80h50v4H155z"/>
+    <!-- Wrench -->
+    <path android:fillColor="#795548"
+        android:pathData="M105,95 L115,85 L120,90 L130,80 L125,75 L115,85 L110,80 L100,90z"/>
+    <!-- Ruler -->
+    <path android:fillColor="#795548"
+        android:pathData="M230,85h60v8H230v-8zM235,85v8M245,85v8M255,85v5M265,85v8M275,85v5M285,85v8"/>
+</vector>

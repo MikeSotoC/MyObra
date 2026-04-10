@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="32dp">
+
+        <!-- ── Page header ── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="20dp"
+            android:background="?attr/colorPrimaryContainer">
+            <ImageView
+                android:layout_width="32dp" android:layout_height="32dp"
+                app:srcCompat="@drawable/ic_nav_precios"
+                android:tint="?attr/colorOnPrimaryContainer"
+                android:contentDescription="Precios"
+                android:layout_marginEnd="12dp"/>
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Precios de Materiales"
+                    android:textSize="18sp" android:textStyle="bold"
+                    android:textColor="?attr/colorOnPrimaryContainer"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Edita según tu mercado local · Se aplican en todos los cálculos"
+                    android:textSize="11sp" android:textColor="?attr/colorOnPrimaryContainer" android:alpha="0.75"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ── Concreto y agregados ── -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp" android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            app:cardElevation="2dp" app:cardCornerRadius="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="CONCRETO Y AGREGADOS"
+                    android:textSize="10sp" android:textStyle="bold" android:letterSpacing="0.10"
+                    android:textColor="?attr/colorPrimary" android:layout_marginBottom="12dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilCemento"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="Cemento (S/./bolsa)" android:layout_marginEnd="6dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etCemento"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilArena"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="Arena (S/./m³)" android:layout_marginStart="6dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etArena"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilPiedra"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="Piedra (S/./m³)" android:layout_marginEnd="6dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPiedra"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilAgua"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="Agua (S/./m³)" android:layout_marginStart="6dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etAgua"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilHormigon"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="Hormigón (S/./m³)" android:layout_marginEnd="6dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etHormigon"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilPiedraGrande"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="Piedra grande (S/./m³)" android:layout_marginStart="6dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPiedraGrande"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ── Ladrillo ── -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp" android:layout_marginVertical="4dp"
+            app:cardElevation="2dp" app:cardCornerRadius="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="UNIDADES DE ALBAÑILERÍA"
+                    android:textSize="10sp" android:textStyle="bold" android:letterSpacing="0.10"
+                    android:textColor="?attr/colorPrimary" android:layout_marginBottom="12dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilLadrilloKK"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="KK 18H (S/./und)" android:layout_marginEnd="6dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etLadrilloKK"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilLadrilloHueco"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="Losa hueco (S/./und)" android:layout_marginStart="6dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etLadrilloHueco"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ── Acero por diámetro ── -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp" android:layout_marginVertical="4dp"
+            app:cardElevation="2dp" app:cardCornerRadius="14dp"
+            app:strokeColor="@color/mat_acero_bg" app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="4dp">
+                    <ImageView android:layout_width="16dp" android:layout_height="16dp"
+                        app:srcCompat="@drawable/ic_mat_acero" android:tint="@color/mat_acero"
+                        android:contentDescription="Acero" android:layout_marginEnd="8dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="ACERO fy=4200 — Precio por diámetro (S/./kg)"
+                            android:textSize="10sp" android:textStyle="bold" android:letterSpacing="0.08"
+                            android:textColor="@color/mat_acero"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Estos precios se aplican automáticamente en el presupuesto"
+                            android:textSize="10sp" android:textColor="@color/mat_acero" android:alpha="0.7"
+                            android:layout_marginBottom="10dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Peso lineal reference row header -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:paddingVertical="4dp"
+                    android:background="@color/mat_acero_bg" android:paddingHorizontal="8dp">
+                    <TextView android:layout_width="0dp" android:layout_weight="2"
+                        android:layout_height="wrap_content" android:text="Diámetro"
+                        android:textSize="10sp" android:textColor="@color/mat_acero" android:textStyle="bold"/>
+                    <TextView android:layout_width="60dp" android:layout_height="wrap_content"
+                        android:text="kg/ml" android:gravity="center"
+                        android:textSize="10sp" android:textColor="@color/mat_acero" android:textStyle="bold"/>
+                    <TextView android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content" android:text="S/./kg"
+                        android:textSize="10sp" android:textColor="@color/mat_acero" android:textStyle="bold"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <!-- Ø6mm -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingVertical="6dp" android:paddingHorizontal="8dp">
+                    <TextView android:layout_width="0dp" android:layout_weight="2"
+                        android:layout_height="wrap_content" android:text="@string/diametro_6mm"
+                        android:textSize="13sp" android:textColor="?attr/colorOnSurface"/>
+                    <TextView android:layout_width="60dp" android:layout_height="wrap_content"
+                        android:text="0.222" android:gravity="center"
+                        android:textSize="12sp" android:textColor="?attr/colorOnSurfaceVariant"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilAcero6mm"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etAcero6mm"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" android:textSize="13sp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- Ø8mm -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingVertical="6dp" android:paddingHorizontal="8dp"
+                    android:background="@color/mat_acero_bg">
+                    <TextView android:layout_width="0dp" android:layout_weight="2"
+                        android:layout_height="wrap_content" android:text="@string/diametro_8mm"
+                        android:textSize="13sp" android:textColor="?attr/colorOnSurface"/>
+                    <TextView android:layout_width="60dp" android:layout_height="wrap_content"
+                        android:text="0.395" android:gravity="center"
+                        android:textSize="12sp" android:textColor="?attr/colorOnSurfaceVariant"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilAcero8mm"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etAcero8mm"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" android:textSize="13sp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- Ø3/8 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingVertical="6dp" android:paddingHorizontal="8dp">
+                    <TextView android:layout_width="0dp" android:layout_weight="2"
+                        android:layout_height="wrap_content" android:text="@string/diametro_38"
+                        android:textSize="13sp" android:textColor="?attr/colorOnSurface"/>
+                    <TextView android:layout_width="60dp" android:layout_height="wrap_content"
+                        android:text="0.560" android:gravity="center"
+                        android:textSize="12sp" android:textColor="?attr/colorOnSurfaceVariant"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilAcero38"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etAcero38"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" android:textSize="13sp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- Ø1/2 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingVertical="6dp" android:paddingHorizontal="8dp"
+                    android:background="@color/mat_acero_bg">
+                    <TextView android:layout_width="0dp" android:layout_weight="2"
+                        android:layout_height="wrap_content" android:text="@string/diametro_12"
+                        android:textSize="13sp" android:textColor="?attr/colorOnSurface"/>
+                    <TextView android:layout_width="60dp" android:layout_height="wrap_content"
+                        android:text="0.994" android:gravity="center"
+                        android:textSize="12sp" android:textColor="?attr/colorOnSurfaceVariant"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilAcero12"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etAcero12"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" android:textSize="13sp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- Ø5/8 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingVertical="6dp" android:paddingHorizontal="8dp">
+                    <TextView android:layout_width="0dp" android:layout_weight="2"
+                        android:layout_height="wrap_content" android:text="@string/diametro_58"
+                        android:textSize="13sp" android:textColor="?attr/colorOnSurface"/>
+                    <TextView android:layout_width="60dp" android:layout_height="wrap_content"
+                        android:text="1.552" android:gravity="center"
+                        android:textSize="12sp" android:textColor="?attr/colorOnSurfaceVariant"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilAcero58"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etAcero58"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" android:textSize="13sp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- Ø3/4 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingVertical="6dp" android:paddingHorizontal="8dp"
+                    android:background="@color/mat_acero_bg">
+                    <TextView android:layout_width="0dp" android:layout_weight="2"
+                        android:layout_height="wrap_content" android:text="@string/diametro_34"
+                        android:textSize="13sp" android:textColor="?attr/colorOnSurface"/>
+                    <TextView android:layout_width="60dp" android:layout_height="wrap_content"
+                        android:text="2.235" android:gravity="center"
+                        android:textSize="12sp" android:textColor="?attr/colorOnSurfaceVariant"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilAcero34"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etAcero34"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" android:textSize="13sp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- Ø1" -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingVertical="6dp" android:paddingHorizontal="8dp">
+                    <TextView android:layout_width="0dp" android:layout_weight="2"
+                        android:layout_height="wrap_content" android:text="@string/diametro_1"
+                        android:textSize="13sp" android:textColor="?attr/colorOnSurface"/>
+                    <TextView android:layout_width="60dp" android:layout_height="wrap_content"
+                        android:text="3.973" android:gravity="center"
+                        android:textSize="12sp" android:textColor="?attr/colorOnSurfaceVariant"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilAcero1"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etAcero1"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" android:textSize="13sp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ── Mano de Obra ── -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp" android:layout_marginVertical="4dp"
+            app:cardElevation="2dp" app:cardCornerRadius="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="MANO DE OBRA  (S/. por Hora-Hombre)"
+                    android:textSize="10sp" android:textStyle="bold" android:letterSpacing="0.10"
+                    android:textColor="?attr/colorPrimary" android:layout_marginBottom="12dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilMoOperario"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="Operario" android:layout_marginEnd="4dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etMoOperario"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilMoOficial"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="Oficial" android:layout_marginHorizontal="4dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etMoOficial"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilMoPeon"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="Peón" android:layout_marginStart="4dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etMoPeon"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ── Action buttons ── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="8dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGuardar"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Guardar precios"
+                android:layout_marginEnd="6dp"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRestaurar"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Restaurar defecto"
+                android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:text="* Tarifas CAPECO vigentes como valores por defecto. Los precios se guardan localmente en tu dispositivo."
+            android:textSize="11sp"
+            android:textColor="?attr/colorOnSurfaceVariant"/>
+
+    </LinearLayout>
+</ScrollView>

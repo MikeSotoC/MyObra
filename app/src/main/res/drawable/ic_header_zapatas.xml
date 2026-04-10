@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp" android:height="160dp"
+    android:viewportWidth="360" android:viewportHeight="160">
+    <!-- Ground line -->
+    <path android:fillColor="#80FFFFFF" android:pathData="M0,100 L360,100 L360,110 L0,110 Z"/>
+    <!-- Soil texture lines -->
+    <path android:strokeColor="#40FFFFFF" android:strokeWidth="1"
+        android:pathData="M10,115 L40,115 M60,118 L90,118 M110,115 L150,115 M170,120 L210,120 M230,115 L260,115 M280,118 L320,118"/>
+    <!-- Zapata shape (trapezoidal footing) -->
+    <path android:fillColor="#FFFFFFFF"
+        android:pathData="M120,100 L240,100 L260,70 L100,70 Z"/>
+    <!-- Column above -->
+    <path android:fillColor="#FFFFFFFF"
+        android:pathData="M160,10 L200,10 L200,72 L160,72 Z"/>
+    <!-- Rebar vertical lines in column -->
+    <path android:strokeColor="#C0C95100" android:strokeWidth="3"
+        android:pathData="M165,12 L165,70 M195,12 L195,70"/>
+    <!-- Rebar in zapata horizontal -->
+    <path android:strokeColor="#C0C95100" android:strokeWidth="2"
+        android:pathData="M105,85 L255,85 M105,92 L255,92"/>
+    <!-- Rebar stirrups -->
+    <path android:strokeColor="#C0C95100" android:strokeWidth="2"
+        android:pathData="M110,72 L110,100 M140,72 L140,100 M170,72 L170,100 M200,72 L200,100 M230,72 L230,100 M250,72 L250,100"/>
+    <!-- Dimension arrows -->
+    <path android:strokeColor="#80FFFFFF" android:strokeWidth="1.5"
+        android:pathData="M100,58 L260,58"/>
+    <path android:fillColor="#80FFFFFF" android:pathData="M100,58 L108,55 L108,61 Z"/>
+    <path android:fillColor="#80FFFFFF" android:pathData="M260,58 L252,55 L252,61 Z"/>
+    <!-- Text annotations are handled in the layout -->
+</vector>

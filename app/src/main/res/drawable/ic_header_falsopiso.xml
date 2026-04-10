@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp" android:height="160dp"
+    android:viewportWidth="360" android:viewportHeight="160">
+    <!-- Layers of floor (cross section) -->
+    <!-- Top: finish/tile -->
+    <path android:fillColor="#FFFFFFFF" android:pathData="M0,60 L360,60 L360,75 L0,75 Z"/>
+    <!-- Tile joints -->
+    <path android:strokeColor="#30000000" android:strokeWidth="1"
+        android:pathData="M40,60 L40,75 M80,60 L80,75 M120,60 L120,75 M160,60 L160,75 M200,60 L200,75 M240,60 L240,75 M280,60 L280,75 M320,60 L320,75"/>
+    <!-- Contrapiso label layer -->
+    <path android:fillColor="#E0FFFFFF" android:pathData="M0,77 L360,77 L360,97 L0,97 Z"/>
+    <!-- Falso piso main layer -->
+    <path android:fillColor="#C0FFFFFF" android:pathData="M0,99 L360,99 L360,125 L0,125 Z"/>
+    <!-- Afirmado/compactado -->
+    <path android:fillColor="#80FFFFFF" android:pathData="M0,127 L360,127 L360,145 L0,145 Z"/>
+    <!-- Soil dots pattern -->
+    <path android:fillColor="#40000000"
+        android:pathData="M10,133 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0 M25,136 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0 M45,132 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0 M65,137 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0 M85,133 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0 M105,136 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0 M125,132 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0"/>
+    <!-- Dim arrows showing layers -->
+    <path android:strokeColor="#80FFFFFF" android:strokeWidth="1.5" android:pathData="M355,60 L355,145"/>
+    <path android:fillColor="#80FFFFFF" android:pathData="M352,60 L358,60 L355,52 Z"/>
+    <path android:fillColor="#80FFFFFF" android:pathData="M352,145 L358,145 L355,153 Z"/>
+</vector>

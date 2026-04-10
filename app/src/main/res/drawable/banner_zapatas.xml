@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp" android:height="140dp"
+    android:viewportWidth="360" android:viewportHeight="140">
+    <!-- Sky background -->
+    <path android:fillColor="#FFF3E0" android:pathData="M0,0h360v140H0z"/>
+    <!-- Ground -->
+    <path android:fillColor="#8D6E63" android:pathData="M0,110h360v30H0z"/>
+    <!-- Soil texture lines -->
+    <path android:strokeColor="#795548" android:strokeWidth="1" android:pathData="M20,115h60M100,118h80M200,115h70M290,118h50"/>
+    <!-- Zapata izquierda -->
+    <path android:fillColor="#BDBDBD" android:pathData="M40,60h70v50H40z"/>
+    <path android:fillColor="#9E9E9E" android:pathData="M25,100h100v12H25z"/>
+    <!-- Zapata derecha -->
+    <path android:fillColor="#BDBDBD" android:pathData="M230,70h70v40h-70z"/>
+    <path android:fillColor="#9E9E9E" android:pathData="M215,100h100v12H215z"/>
+    <!-- Zapata central (destacada) -->
+    <path android:fillColor="#C95100" android:pathData="M145,45h80v65H145z"/>
+    <path android:fillColor="#952800" android:pathData="M128,98h114v14H128z"/>
+    <!-- Columna sobre zapata central -->
+    <path android:fillColor="#E0E0E0" android:pathData="M170,10h28v37H170z"/>
+    <!-- Armadura de acero (líneas) -->
+    <path android:strokeColor="#FF8F00" android:strokeWidth="2" android:pathData="M155,50v58M175,50v58M195,50v58M210,50v58"/>
+    <path android:strokeColor="#FF8F00" android:strokeWidth="1.5" android:pathData="M155,60h55M155,75h55M155,90h55M155,103h55"/>
+    <!-- Label -->
+    <path android:fillColor="#C95100" android:pathData="M10,8h120v22H10z" android:fillAlpha="0.9"/>
+</vector>

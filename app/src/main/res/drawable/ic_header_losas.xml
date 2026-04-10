@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp" android:height="160dp"
+    android:viewportWidth="360" android:viewportHeight="160">
+    <!-- Top concrete slab -->
+    <path android:fillColor="#FFFFFFFF" android:pathData="M0,30 L360,30 L360,55 L0,55 Z"/>
+    <!-- Viguetas (ribs) - 7 ribs -->
+    <path android:fillColor="#FFFFFFFF"
+        android:pathData="M5,55 L35,55 L35,115 L5,115 Z M55,55 L85,55 L85,115 L55,115 Z M105,55 L135,55 L135,115 L105,115 Z M155,55 L185,55 L185,115 L155,115 Z M205,55 L235,55 L235,115 L205,115 Z M255,55 L285,55 L285,115 L255,115 Z M305,55 L335,55 L335,115 L305,115 Z"/>
+    <!-- Ladrillo hueco blocks between ribs -->
+    <path android:fillColor="#E0FFFFFF"
+        android:pathData="M37,58 L53,58 L53,112 L37,112 Z M87,58 L103,58 L103,112 L87,112 Z M137,58 L153,58 L153,112 L137,112 Z M187,58 L203,58 L203,112 L187,112 Z M237,58 L253,58 L253,112 L237,112 Z M287,58 L303,58 L303,112 L287,112 Z"/>
+    <!-- Hollow brick holes -->
+    <path android:fillColor="#20000000"
+        android:pathData="M39,65 L51,65 L51,80 L39,80 Z M39,85 L51,85 L51,100 L39,100 Z M89,65 L101,65 L101,80 L89,80 Z M89,85 L101,85 L101,100 L89,100 Z M139,65 L151,65 L151,80 L139,80 Z M139,85 L151,85 L151,100 L139,100 Z M189,65 L201,65 L201,80 L189,80 Z M189,85 L201,85 L201,100 L189,100 Z M239,65 L251,65 L251,80 L239,80 Z M239,85 L251,85 L251,100 L239,100 Z M289,65 L301,65 L301,80 L289,80 Z M289,85 L301,85 L301,100 L289,100 Z"/>
+    <!-- Bottom finish line -->
+    <path android:strokeColor="#FFFFFFFF" android:strokeWidth="1"
+        android:pathData="M0,115 L360,115"/>
+    <!-- Rebar in viguetas -->
+    <path android:strokeColor="#C0C95100" android:strokeWidth="2"
+        android:pathData="M15,110 L25,110 M65,110 L75,110 M115,110 L125,110 M165,110 L175,110 M215,110 L225,110 M265,110 L275,110 M315,110 L325,110"/>
+</vector>

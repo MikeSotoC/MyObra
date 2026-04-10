@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="?attr/colorBackground">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout android:layout_width="match_parent" android:layout_height="130dp"
+            android:background="?attr/colorPrimary">
+            <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+                android:scaleType="fitXY" android:alpha="0.15"
+                app:srcCompat="@drawable/ic_header_cimientos"
+                android:contentDescription="@string/title_cimientos"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                android:orientation="vertical" android:gravity="center_vertical"
+                android:paddingHorizontal="20dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="CIMENTACIÓN" android:textSize="9sp" android:textStyle="bold"
+                    android:letterSpacing="0.12" android:textColor="?attr/colorPrimaryContainer"
+                    android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/title_cimientos" android:textSize="22sp"
+                    android:textStyle="bold" android:textColor="@color/white"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/desc_cimientos" android:textSize="11sp"
+                    android:textColor="#CCffffff" android:layout_marginTop="2dp"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- A. DATOS DE ENTRADA -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp" android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            app:cardElevation="2dp" app:cardCornerRadius="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="36dp"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingHorizontal="14dp" android:background="?attr/colorSurfaceVariant">
+                    <TextView android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content" android:text="A.  DATOS DE ENTRADA"
+                        android:textSize="11sp" android:textStyle="bold" android:letterSpacing="0.06"
+                        android:textColor="?attr/colorOnSurfaceVariant"/>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnTablaCapeco"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="📊 Tabla CAPECO" android:textSize="11sp"
+                        android:textColor="?attr/colorPrimary"
+                        android:minHeight="0dp" android:paddingVertical="0dp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="A.1  Proporción del concreto ciclópeo"
+                        android:textSize="12sp" android:textColor="?attr/colorOnSurfaceVariant"
+                        android:layout_marginBottom="6dp"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilProporcion"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:hint="@string/label_proporcion" android:layout_marginBottom="14dp">
+                        <AutoCompleteTextView android:id="@+id/dropProporcion"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="none"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="A.2  Geometría del cimiento"
+                        android:textSize="12sp" android:textColor="?attr/colorOnSurfaceVariant"
+                        android:layout_marginBottom="6dp"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilLargoTotal"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:hint="Largo total (m)" android:layout_marginBottom="8dp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etLargoTotal"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilAncho"
+                            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp" android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:hint="Ancho (m)" android:layout_marginEnd="6dp">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etAncho"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilAlto"
+                            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp" android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:hint="Alto (m)" android:layout_marginStart="6dp">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etAlto"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Actions -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:paddingHorizontal="12dp" android:paddingBottom="8dp">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnCalcular"
+                android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:text="Calcular materiales" android:layout_marginEnd="6dp"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnLimpiar"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Limpiar" android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
+        <include layout="@layout/include_resultados_card"/>
+        <include layout="@layout/include_presupuesto_card"/>
+        <View android:layout_width="match_parent" android:layout_height="24dp"/>
+    </LinearLayout>
+</ScrollView>

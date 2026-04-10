@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp" android:height="160dp"
+    android:viewportWidth="360" android:viewportHeight="160">
+    <!-- Two columns supporting beam -->
+    <path android:fillColor="#FFFFFFFF" android:pathData="M20,80 L60,80 L60,155 L20,155 Z"/>
+    <path android:fillColor="#FFFFFFFF" android:pathData="M300,80 L340,80 L340,155 L300,155 Z"/>
+    <!-- Main beam -->
+    <path android:fillColor="#FFFFFFFF" android:pathData="M10,50 L350,50 L350,85 L10,85 Z"/>
+    <!-- Rebar in beam (top and bottom) -->
+    <path android:strokeColor="#C0C95100" android:strokeWidth="3"
+        android:pathData="M15,55 L345,55 M15,60 L345,60 M15,78 L345,78 M15,82 L345,82"/>
+    <!-- Stirrups in beam -->
+    <path android:strokeColor="#C0C95100" android:strokeWidth="1.5"
+        android:pathData="M20,53 L20,83 M45,53 L45,83 M70,53 L70,83 M95,53 L95,83 M120,53 L120,83 M145,53 L145,83 M170,53 L170,83 M195,53 L195,83 M220,53 L220,83 M245,53 L245,83 M270,53 L270,83 M295,53 L295,83 M320,53 L320,83 M340,53 L340,83"/>
+    <!-- Load arrows coming from above -->
+    <path android:fillColor="#80FFFFFF"
+        android:pathData="M100,10 L105,30 L95,30 Z M180,10 L185,30 L175,30 Z M260,10 L265,30 L255,30 Z"/>
+    <path android:strokeColor="#80FFFFFF" android:strokeWidth="1.5"
+        android:pathData="M100,10 L100,30 M180,10 L180,30 M260,10 L260,30"/>
+</vector>

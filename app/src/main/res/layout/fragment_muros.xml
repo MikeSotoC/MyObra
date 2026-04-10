@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="?attr/colorBackground">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout android:layout_width="match_parent" android:layout_height="130dp"
+            android:background="?attr/colorPrimary">
+            <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+                android:scaleType="fitXY" android:alpha="0.15"
+                app:srcCompat="@drawable/ic_header_muros"
+                android:contentDescription="@string/title_muros"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                android:orientation="vertical" android:gravity="center_vertical" android:paddingHorizontal="20dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/title_muros" android:textSize="22sp"
+                    android:textStyle="bold" android:textColor="@color/white"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/desc_muros" android:textSize="11sp"
+                    android:textColor="#CCffffff" android:layout_marginTop="2dp"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp" android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            app:cardElevation="2dp" app:cardCornerRadius="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="36dp"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingHorizontal="14dp" android:background="?attr/colorSurfaceVariant">
+                    <TextView android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content" android:text="A.  DATOS DE ENTRADA"
+                        android:textSize="11sp" android:textStyle="bold" android:letterSpacing="0.06"
+                        android:textColor="?attr/colorOnSurfaceVariant"/>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnTablaCapeco"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="📊 Tabla CAPECO" android:textSize="11sp"
+                        android:textColor="?attr/colorPrimary"
+                        android:minHeight="0dp" android:paddingVertical="0dp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+                    <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilTipoMuro"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:hint="Tipo de ladrillo" android:layout_marginBottom="8dp">
+                        <AutoCompleteTextView android:id="@+id/dropTipoMuro"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="none"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilAparejo"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:hint="Aparejo" android:layout_marginBottom="8dp">
+                        <AutoCompleteTextView android:id="@+id/dropAparejo"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="none"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilNumPanos"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:hint="N° de paños" android:layout_marginBottom="8dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etNumPanos"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="number" android:text="1"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilLargo"
+                            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                            android:hint="Largo (m)" android:layout_marginEnd="6dp">
+                            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etLargo"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilAlto"
+                            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                            android:hint="Altura (m)" android:layout_marginStart="6dp">
+                            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etAlto"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:paddingHorizontal="12dp" android:paddingBottom="8dp">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnCalcular"
+                android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:text="Calcular materiales" android:layout_marginEnd="6dp"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnLimpiar"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Limpiar" android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
+        <include layout="@layout/include_resultados_card"/>
+        <include layout="@layout/include_presupuesto_card"/>
+        <View android:layout_width="match_parent" android:layout_height="24dp"/>
+    </LinearLayout>
+</ScrollView>

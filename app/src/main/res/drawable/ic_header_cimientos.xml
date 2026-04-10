@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp" android:height="160dp"
+    android:viewportWidth="360" android:viewportHeight="160">
+    <!-- Ground fill -->
+    <path android:fillColor="#40FFFFFF" android:pathData="M0,90 L360,90 L360,160 L0,160 Z"/>
+    <!-- Cimiento corrido (trapezoidal continuous) -->
+    <path android:fillColor="#FFFFFFFF"
+        android:pathData="M0,90 L360,90 L360,130 L0,130 Z"/>
+    <!-- Ciclópeo stones texture -->
+    <path android:fillColor="#20000000"
+        android:pathData="M20,95 L55,95 L60,115 L15,115 Z M70,95 L110,95 L115,125 L65,125 Z M125,98 L165,98 L168,118 L122,118 Z M178,92 L220,92 L225,128 L173,128 Z M235,96 L275,96 L278,120 L232,120 Z M288,94 L330,94 L333,116 L285,116 Z"/>
+    <!-- Wall above cimiento -->
+    <path android:fillColor="#FFFFFFFF"
+        android:pathData="M60,10 L100,10 L100,92 L60,92 Z"/>
+    <path android:fillColor="#FFFFFFFF"
+        android:pathData="M260,10 L300,10 L300,92 L260,92 Z"/>
+    <!-- Mortar lines in wall -->
+    <path android:strokeColor="#20000000" android:strokeWidth="1"
+        android:pathData="M60,20 L100,20 M60,30 L100,30 M60,40 L100,40 M60,50 L100,50 M60,60 L100,60 M60,70 L100,70 M60,80 L100,80"/>
+    <path android:strokeColor="#20000000" android:strokeWidth="1"
+        android:pathData="M260,20 L300,20 M260,30 L300,30 M260,40 L300,40 M260,50 L300,50 M260,60 L300,60 M260,70 L300,70 M260,80 L300,80"/>
+    <!-- Dim line showing width -->
+    <path android:strokeColor="#80FFFFFF" android:strokeWidth="1.5"
+        android:pathData="M0,140 L360,140"/>
+</vector>

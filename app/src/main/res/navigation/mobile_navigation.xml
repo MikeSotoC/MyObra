@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/mobile_navigation"
+            app:startDestination="@+id/nav_proyectos">
+
+    <fragment
+        android:id="@+id/nav_proyectos"
+        android:name="com.uchi.myobra.ui.proyectos.ProyectosFragment"
+        android:label="Mis Proyectos"
+        tools:layout="@layout/fragment_proyectos"/>
+
+    <fragment
+        android:id="@+id/nav_zapatas"
+        android:name="com.uchi.myobra.ui.zapatas.ZapatasFragment"
+        android:label="@string/menu_zapatas"
+        tools:layout="@layout/fragment_zapatas"/>
+
+    <fragment
+        android:id="@+id/nav_cimientos"
+        android:name="com.uchi.myobra.ui.cimientos.CimientosFragment"
+        android:label="@string/menu_cimientos"
+        tools:layout="@layout/fragment_cimientos"/>
+
+    <fragment
+        android:id="@+id/nav_sobrecimiento"
+        android:name="com.uchi.myobra.ui.sobrecimiento.SobreFragment"
+        android:label="@string/menu_sobrecimiento"
+        tools:layout="@layout/fragment_sobrecimiento"/>
+
+    <fragment
+        android:id="@+id/nav_muros"
+        android:name="com.uchi.myobra.ui.muros.MurosFragment"
+        android:label="@string/menu_muros"
+        tools:layout="@layout/fragment_muros"/>
+
+    <fragment
+        android:id="@+id/nav_falsopiso"
+        android:name="com.uchi.myobra.ui.falsopiso.FalsopisoFragment"
+        android:label="@string/menu_falsopiso"
+        tools:layout="@layout/fragment_falsopiso"/>
+
+    <fragment
+        android:id="@+id/nav_columnas"
+        android:name="com.uchi.myobra.ui.columnas.ColumnasFragment"
+        android:label="@string/menu_columnas"
+        tools:layout="@layout/fragment_columnas"/>
+
+    <fragment
+        android:id="@+id/nav_vigas"
+        android:name="com.uchi.myobra.ui.vigas.VigasFragment"
+        android:label="@string/menu_vigas"
+        tools:layout="@layout/fragment_vigas"/>
+
+    <fragment
+        android:id="@+id/nav_losas"
+        android:name="com.uchi.myobra.ui.losas.LosasFragment"
+        android:label="@string/menu_losas"
+        tools:layout="@layout/fragment_losas"/>
+
+    <fragment
+        android:id="@+id/nav_presupuesto"
+        android:name="com.uchi.myobra.ui.presupuesto.PresupuestoFragment"
+        android:label="@string/menu_presupuesto"
+        tools:layout="@layout/fragment_presupuesto"/>
+
+    <fragment
+        android:id="@+id/nav_precios"
+        android:name="com.uchi.myobra.ui.precios.PreciosFragment"
+        android:label="@string/menu_precios"
+        tools:layout="@layout/fragment_precios"/>
+</navigation>

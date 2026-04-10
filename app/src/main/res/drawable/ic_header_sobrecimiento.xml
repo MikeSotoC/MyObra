@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp" android:height="160dp"
+    android:viewportWidth="360" android:viewportHeight="160">
+    <!-- Ground -->
+    <path android:fillColor="#30FFFFFF" android:pathData="M0,110 L360,110 L360,160 L0,160 Z"/>
+    <!-- Cimiento corrido (wider base) -->
+    <path android:fillColor="#90FFFFFF" android:pathData="M20,110 L340,110 L340,150 L20,150 Z"/>
+    <!-- Ciclopeo texture -->
+    <path android:fillColor="#20000000"
+        android:pathData="M30,115 L70,115 L72,145 L28,145 Z M80,118 L120,118 L122,145 L78,145 Z M130,114 L170,114 L172,148 L128,148 Z M180,116 L220,116 L222,145 L178,145 Z M230,113 L270,113 L272,147 L228,147 Z M280,116 L320,116 L322,145 L278,145 Z"/>
+    <!-- Sobrecimiento (narrower) -->
+    <path android:fillColor="#FFFFFFFF" android:pathData="M60,60 L300,60 L300,112 L60,112 Z"/>
+    <!-- Sobrecimiento texture (concrete simple) -->
+    <path android:strokeColor="#20000000" android:strokeWidth="1"
+        android:pathData="M60,70 L300,70 M60,80 L300,80 M60,90 L300,90 M60,100 L300,100"/>
+    <!-- Wall ladrillo on top -->
+    <path android:fillColor="#FFFFFFFF" android:pathData="M90,15 L130,15 L130,62 L90,62 Z"/>
+    <path android:fillColor="#FFFFFFFF" android:pathData="M230,15 L270,15 L270,62 L230,62 Z"/>
+    <!-- Brick courses -->
+    <path android:strokeColor="#20000000" android:strokeWidth="0.8"
+        android:pathData="M90,25 L130,25 M90,35 L130,35 M90,45 L130,45 M90,55 L130,55"/>
+    <path android:strokeColor="#20000000" android:strokeWidth="0.8"
+        android:pathData="M230,25 L270,25 M230,35 L270,35 M230,45 L270,45 M230,55 L270,55"/>
+    <!-- Height annotation -->
+    <path android:strokeColor="#80FFFFFF" android:strokeWidth="1.5"
+        android:pathData="M15,60 L15,112"/>
+    <path android:fillColor="#80FFFFFF" android:pathData="M12,60 L18,60 L15,52 Z M12,112 L18,112 L15,120 Z"/>
+</vector>
